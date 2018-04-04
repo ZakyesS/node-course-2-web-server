@@ -20,7 +20,7 @@ app.use((req, res, next) => { //next dice cuando ha acabado el middleware.
     next(); //si se llama, se acaba el middleware y sigue ejecutandose lo que viene a continuación.
 });
 
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
     res.render('maintance.hbs', {
         title: req.path,
     });
@@ -31,7 +31,7 @@ app.use((req, res, next) => {
      afectará el estado de mantenimiento de la web. En cada sitio renderizará
      la maintance.hbs.
     */
-});
+//});
 // para usar una ruta estática, se usa el __dirname(que significa en la misma ruta principal + 'ruta que se quiera').
 app.use(express.static(__dirname + '/public'));
 
