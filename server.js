@@ -76,8 +76,13 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Unable to handle request!.',
     });
 });
+app.get('/beautifully', (req, res) => {
+    res.render('beautifully.hbs', {
+        pageTitle: 'Beautifully Page',
+        greeting: 'Wellcome to the most beautiful webpage!!',
+    });
+});
+
 app.listen(port, () => {
     console.log(`Sever is up on port ${port}`);
 }); //puerto usado para escuchar.
-
-
